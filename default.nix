@@ -6,6 +6,5 @@
 #  overlays = import ./overlays; # nixpkgs overlays
 
   adom = pkgs.callPackage ./pkgs/adom { };
-  # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
-  # ...
+  xilinx-env = pkgs.callPackage ./pkgs/xilinx-env { };
 }
