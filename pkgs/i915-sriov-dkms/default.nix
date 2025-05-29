@@ -9,8 +9,8 @@ stdenv.mkDerivation {
 	src = fetchFromGitHub {
 		owner = "strongtz";
 		repo = "i915-sriov-dkms";
-		tag = "2025.03.27";
-		sha256 = "sha256-KDEFKa7bgDsm/GCvYDFObNDoZn2c71oaQlgYMAN2B0I=";
+		tag = "2025.05.18";
+		sha256 = "sha256-AMwYBAQvY6QYvRQ9aEPqUWhCr38DYgZySopFbDnuqUw=";
 	};
 
 	hardeningDisable = [ "pic" ];
