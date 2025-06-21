@@ -1,5 +1,7 @@
 { pkgs ? import <nixpkgs> { } }:
-
+let
+	ngrams = import ./pkgs/ngrams {inherit pkgs;};
+in
 rec {
   adom = pkgs.callPackage ./pkgs/adom { };
   xilinx-env = pkgs.callPackage ./pkgs/xilinx-env { };
@@ -9,4 +11,4 @@ rec {
 		mygui = mygui;
 	};
   mygui = pkgs.callPackage ./pkgs/mygui { };
-}
+} // ngrams
