@@ -11,4 +11,5 @@ rec {
 		mygui = mygui;
 	};
   mygui = pkgs.callPackage ./pkgs/mygui { };
+	elegant-grub2-themes = pkgs.callPackage ./pkgs/elegant-grub2-themes { };
 } // ngrams
