@@ -1,5 +1,5 @@
 { lib, stdenv, pkgs}:
-pkgs.buildFHSUserEnv {
+pkgs.buildFHSEnv {
 	name = "xilinx-env";
 	targetPkgs = pkgs: with pkgs; let
 		ncurses' = ncurses5.overrideAttrs (old: {
