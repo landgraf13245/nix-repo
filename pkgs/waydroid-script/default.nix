@@ -10,6 +10,7 @@
   lzip,
   util-linux,
   nix-update-script,
+	setuptools,
 }:
 let
   pname = "waydroid-script";
@@ -25,7 +26,7 @@ let
     pname = "resetprop";
     inherit version src;
     dontBuild = true;
-    installPhase = ''
+		installPhase = ''
       mkdir -p $out/share
       cp -r bin/* $out/share/
     '';
@@ -33,6 +34,11 @@ let
 in
 buildPythonApplication rec {
   inherit pname version src;
+
+  pyproject = true;
+	build-system = [
+		setuptools
+	];
 
   propagatedBuildInputs = [
     inquirerpy
