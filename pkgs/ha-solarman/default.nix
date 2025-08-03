@@ -2,12 +2,14 @@
   buildHomeAssistantComponent,
   fetchFromGitHub,
   lib,
-  pysolarmanv5,
-  pyyaml,
+	propcache,
+	aiohttp,
+	aiofiles,
+	pyyaml,
 }:
 
 buildHomeAssistantComponent rec {
-  owner = "StephanJoubert";
+  owner = "davidrapan";
   domain = "solarman";
   version = "v25.06.07";
 
@@ -15,11 +17,13 @@ buildHomeAssistantComponent rec {
     owner = "davidrapan";
     repo = "ha-solarman";
     tag = version;
-    hash = "sha256-+znRq7LGIxbxMEypIRqbIMgV8H4OyiOakmExx1aHEl8=";
+    hash = "sha256-fUlM1AecyYbwm9J9Ip72gg09LqA/I5JV5PQJmMadr8c=";
   };
 
   dependencies = [
-    pysolarmanv5
+		propcache
+		aiohttp
+		aiofiles
     pyyaml
   ];
 

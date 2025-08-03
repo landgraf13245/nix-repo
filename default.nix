@@ -13,7 +13,5 @@ rec {
   mygui = pkgs.callPackage ./pkgs/mygui { };
 	elegant-grub2-themes = pkgs.callPackage ./pkgs/elegant-grub2-themes { };
   waydroid-script = pkgs.python3Packages.callPackage ./pkgs/waydroid-script { };
-  ha-solarman = pkgs.python3Packages.callPackage ./pkgs/ha-solarman {
-		pysolarmanv5 = pkgs.python3Packages.pysolarmanv5;
-	};
+  ha-solarman = pkgs.python3Packages.callPackage ./pkgs/ha-solarman {};
 } // ngrams
